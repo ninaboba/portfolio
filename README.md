@@ -3,7 +3,7 @@
 - [Project overview](#project-overview)
 - [Data collection with Python](#data-collection-with-python)
 - [Data wrangling with Spark](#data-wrangling-with-spark)
-- [Data storage with Google Cloud Storage (GCS)](#data-storage-with-google-cloud-storage-(gcs))
+- [Data storage with Google Cloud Storage (GCS)](#data-storage-with-google-cloud-storage-gcs)
 - [Automated data pipeline with Airflow](#automated-data-pipeline-with-airflow)
 - [Building Data Warehouse with BigQuery](#building-data-warehouse-with-bigquery)
 
