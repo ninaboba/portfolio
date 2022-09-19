@@ -8,7 +8,7 @@
 - Building Data Warehouse with BigQuery
 
 ## Project overview
-[image](images/overview.png)
+![overview](images/overview.png)
 
 This project builds an automated end-to-end data pipeline that aims to learn about data engineer process from data collection, data cleaning, data storaging, automated pipeline with airflow and build data warehouse.
 
