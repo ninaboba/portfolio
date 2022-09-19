@@ -17,19 +17,24 @@ Firstly, we extract the books data from MySQL database and currency exchange rat
 ## Data collection with Python
 We use python to collect data from database and API. Then we merge it into csv file.
 1. Connect to database with pymysql, query table and convert to Pandas for better visual.
+
 ![datacollection_1](images/datacollection_1.png)
 ![datacollection_2](images/datacollection_2.png)
 
 2. Query another table with Pandas
+
 ![datacollection_3](images/datacollection_3.png)
 
 3. Join 2 table (audible_transaction & audible_data)
+
 ![datacollection_4](images/datacollection_4.png)
 
 4. Read data from REST API [link](https://r2de2-workshop-vmftiryt6q-ts.a.run.app/usd_thb_conversion_rate) ,convert to Pandas and indexing the table.
+
 ![datacollection_5](images/datacollection_5.png)
 
 5. Join the conversion rate table and previous table with Pandas to make THB price column.
+
 ![datacollection_6](images/datacollection_6.png)
 
 6. Save the result to csv file.
