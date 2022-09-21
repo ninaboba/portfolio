@@ -130,4 +130,6 @@ Boxplot to show number distribution and outliers
 
 ![dw_2](images/dw_2.png)
 
+![dw_overview](images/dw_overview.png)
+
 5. Now we can use the BigQuery to query the data you want to analyze with SQL language.
