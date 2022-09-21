@@ -90,7 +90,44 @@ Boxplot to show number distribution and outliers
 ![spark_12](images/spark_12.png)
 
 ## Data storage with Google Cloud Storage (GCS)
+1. Create project and bucket on Google Cloud Storage (Data Lake) via web UI
+2. Upload previous CSV file into data lake via cloud shell
+- upload file into vm first
+- then use gsutil command to copy file into bucket
 
 ## Automated data pipeline with Airflow
+1. First, create Cloud Composer to run Apache Airflow in it.
+2. Insall Python packages in Airflow at PYPI PACKAGES tab in recently created environment.
+- pymysql
+- requests
+- pandas
+3. Create MySQL connection in airflow to connect with the database
+4. Coding previous process (Read data from database, read API as CSV and merge data) into one python file.
+
+![airflow_1](images/airflow_1.png)
+
+![airflow_2](images/airflow_2.png)
+
+5. Also, with DAG command and dependencies
+
+![airflow_3](images/airflow_3.png)
+
+![airflow_4](images/airflow_4.png)
+
+6. The final output will automatically upload to Google Cloud Studio
+
+![airflow_5](images/airflow_5.png)
 
 ## Building Data Warehouse with BigQuery
+1. After we try some Airflow DAGs, we will continue to move the completed final output into Google BigQuery (Data Warehouse) for easier analytic usage.
+2. Firstly, we must create dataset on Google BigQuery.
+- Important! Data location must be the same with Cloud Composer location
+3. Again, go to previous DAG file to automatic load data to dataset on Google BigQuery using BashOperator.
+
+![dw_1](images/dw_1.png)
+
+4. Create dependencies in Airflow to automatically run the project.
+
+![dw_2](images/dw_2.png)
+
+5. Now we can use the BigQuery to query the data you want to analyze with SQL language.
